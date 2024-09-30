@@ -1,0 +1,78 @@
+---
+---
+<div id="home" class="
+    py-3
+    w-[70%]">
+
+    <img src="../../public/img/fotoperfil.png"
+        alt=""
+        id="img-profile"
+        class="rounded-lg row-span-3">
+    <div>
+        <h1 id="title" class="profile">Hi, i'm Juan Hidalgo</h1>
+        <span id="subtitle">Developer Full-Stack Junior</span>
+    </div>
+    <p id="profile-info">Specializes in designing UI/UX and developing cutting-edge software solutions for web aplications.</p>
+    <ul
+        id="profile-bar"
+        class="flex justify-between">
+        <li class="px-1"> <i class="bi bi-linkedin"> </i>
+        </li>
+        <li class="px-1"> <i class="bi bi-github"> </i>
+        </li>
+        <li class="px-1"> <i class="bi bi-telephone-fill"> </i>
+        </li>
+        <li class="px-1"> <i class="bi bi-envelope-fill"> </i>
+        </li>
+    </ul>
+</div>
+<style>
+    #home{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+    #img-profile{
+        width: 13rem;
+        place-self: center;
+        grid-column: 2;
+        column-span: 2;
+    }
+    .profile,
+    #title,
+    #subtitle,
+    #profile-info,
+    #profile-bar{
+        grid-column: 3;
+        column-span: 2;
+    }
+    #title{
+        width: 15rem;
+        font-size: 1.5rem;
+    }
+    #subtitle{
+        color: var(--tiger-orange);
+        font-size: 1rem;
+    }
+    #profile-info,
+    #profile-bar{
+        width: 18rem;
+    }
+    #profile-info{
+        font-size: 1.1rem;
+    }
+    #profile-bar{
+        font-size: 1rem;
+        place-self: start;
+    }
+    li{
+        background-color: var(--gray-smoke);
+        padding: .1rem 1.2rem .1rem 1.2rem;
+        border-radius: .5rem;
+    }
+    li:hover{
+        padding: .1rem 1.5rem .1rem 1.5rem;
+    }
+    </style>
