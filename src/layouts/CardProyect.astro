@@ -1,0 +1,45 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href?: string;
+	img: string;
+	company: string;
+	link?: string;
+
+}
+const { href, title, body, img, link, company } = Astro.props;
+---
+<li
+class="flex flex-wrap justify-between">
+	<a
+	href={href} 
+	class="flex
+	h-auto
+	m-3
+	p-1
+	card-proyect">
+		<img 
+		src={'../../public/img/' + img}>
+		<span 
+		class="flex flex-col m-2 descrip">
+			<h3 class="font-semibold">{title}</h3>
+			<p class="text-pretty card-descript">{body}</p>
+			<a href={link} class="link-proyect">{company}</a>
+		</span>
+	</a>
+</li>
+<style>
+	li{
+		max-width: 50%;
+	}
+	.card-proyect{
+		box-sizing: border-box;
+	}
+	.card-proyect>img{
+		max-width: 15rem;
+	}
+	.card-proyect>.descript{
+
+	}
+</style>

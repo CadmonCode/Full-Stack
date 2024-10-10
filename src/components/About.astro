@@ -1,43 +1,65 @@
-<section class="
+---
+const routeIcons = "../../public/icons/"
+---
+<section 
+    id="about"
+    class="
     flex 
     flex-col
-    justify-between
+    justify-center
     items-center
-    py-3 w-[70%]
-    bg-gray-300">
+    py-3 w-[70%]">
     
-    <h1>About</h1>
-    <article class="w-[60%]">
-        <p>I'm a software developer focusing on desktop applications, where I've been creating robust solutions using C#g/typescript.pngpeScript, along with frameworks like Angular and .NET. My journey in software development is driven by a passion for crafting high-quality applications that meet user needs and streamline their tasks.</p>
+    <h1 id="about-title">ABOUT</h1>
+    <article class="w-[65%]">
+        <p id="about-txt" class="text-justify">I'm a software developer focusing on desktop applications, where I've been creating robust solutions using C#, typescript, javascript, along with frameworks like Angular and .NET. My journey in software development is driven by a passion for crafting high-quality applications that meet user needs and streamline their tasks.</p>
     </article>
-<!--     <article 
-        class="w-[60%] m-5
+    <article
+        id="tecnologies"
+        class="w-[65%] m-5
         flex
         justify-around">
-        <img
-            src="../../public/img/c-sharp.png" 
-            alt=""
-            class="w-[2.5rem]
-            h-[3rem]">
-        <img
-            src="../../public/img/net-core.png" 
-            alt=""
-            class="w-[3rem]
-            h-[3rem]">
-        <img
-            src="../../public/img/javascript.png" 
-            alt=""
-            class="w-[3rem]
-            h-[3rem]">
-        <img
-            src="../../public/img/typescript.png" 
-            alt=""
-            class="w-[3rem]
-            h-[3rem]">
-        <img
-            src="../../public/img/angular.png" 
-            alt=""
-            class="w-[3rem]
-            h-[3rem]">
-    </article> -->
+        <span class="tech-item">c-sharp</span>
+        <span class="tech-item">.net core</span>
+        <span class="tech-item">javascript</span>
+        <span class="tech-item">typescript</span>
+        <span class="tech-item">angular</span>
+    </article>
+    <article class="flex justify-around w-[65%] m-2 hidden">
+        <img src={routeIcons + "c-sharp.ico"} class="icon">
+        <img src={routeIcons + "net-core.ico"} class="icon">
+        <img src={routeIcons + "javascript.ico"} class="icon">
+        <img src={routeIcons + "typescript.ico"} class="icon">
+        <img src={routeIcons + "angular.ico"} class="icon">
+    </article>
 </section>
+<style>
+    #about{
+        height: 100vh;
+    }
+    #about-title,
+    #about-txt,
+    #tecnologies{
+        font-size: 1.5rem;
+    }
+    #tecnologies{
+        margin: 2rem;
+    }
+    .tech-item{
+        padding: 1rem;
+        border-radius: 1.5rem;
+        background: linear-gradient(150deg, var(--white-pearl), var(--gray-smoke));
+        box-shadow:  5px 5px 12px var(--gray-smoke),
+                    -5px -5px 12px var(--white-pearl);
+    }
+    .tech-item:hover{
+        background: linear-gradient(145deg,var(--gray-smoke),
+        var(--white-pearl));
+        box-shadow: inset 10px 10px 15px #dfdfdf,
+                    inset -10px -10px 15px #ffffff;
+    }
+    .icon{
+        width: 2rem;
+        border-radius: .25rem;
+    }
+</style>

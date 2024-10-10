@@ -1,17 +1,86 @@
-<h1>Proyects</h1>
-<ul class="flex flex-wrap">
-    <li class="h-[400px] w-[310px] m-3 p-1">
-        <a href="https://premiosesland.com/" class="">
-            <img src="../../public/img/esland-miniatura.png" alt="">
-            <h3 class="font-semibold not-italic">Premios Esland</h3>
-            <p class="text-pretty">Está diseñada con un enfoque en contenido estático utilizando Astro como framework principal y estilizada con TailwindCSS. La página proporciona información sobre el evento, como la fecha, los nominados, y la transmisión en vivo, presentando un diseño minimalista y fácil de navegar.</p>
-        </a>
-    </li>
-    <li class="h-[400px] w-[310px] m-3 p-1">
-        <a href="https://https://lavelada.es/" class="">
-            <img src="../../public/img/veladaDelAño4.png" alt="">
-            <h3 class="font-semibold not-italic">La Velada del año 4</h3>
-            <p class="text-pretty">Utiliza Astro para manejar el contenido estático y TailwindCSS para el diseño. Además de proporcionar información detallada sobre el evento, la página permite a los usuarios adquirir entradas y acceder a las redes sociales oficiales.</p>
-        </a>
-    </li>
-</ul>
+---
+import CardProyect from "../layouts/CardProyect.astro"
+const proyects = [
+    {
+        title:"TRACKERTECH",
+        body:"Es una herramienta de análisis y monitorización de datos que funciona como un agregador de estadísticas que recopila y presenta de forma visual y comprensible una amplia variedad de métricas relacionadas con canales, juegos y la plataforma en general.",
+        img:"img.jpg",
+        company: "Bodytech",
+        link: "https://bodytech.com.co/"
+    },
+    {
+        title:"Oasis",
+        body:"Es una aplicacion que permie la centralizacion de eventos e interacciones enfocados a los entusiastas de la cultura pop y los videojuegos consolidando informacion de productos, eventos y competencias vinculados al ranking nacional.",
+        img:"img.jpg",
+        company: "Compensar",
+        link: "https://compensar.com.co/"
+    }
+]
+---
+
+<section
+    id="proyects"
+    class="flex flex-col justify-center w-[65%]">
+    <h1
+    id="title" 
+    class="text-center w-[100%]">PROYECTS</h1>
+    <ul
+    class="flex justify-center flex-wrap w-[100%]">
+        {
+            proyects.map((item) => (
+                <CardProyect {...item}/>
+            ))
+        }
+    </ul>
+    <span 
+    id="show-more"
+    class="flex justify-center w-[100%]"> 
+        <a href="" id="showMore-btn">Show more</a><i class="bi bi-arrow-right"></i>
+    </span>
+</section>
+
+<style>
+    #proyects{
+        height: 100vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #title{
+        font-size: 1.5rem;
+        grid-row: 1;
+        column-span: all;
+    }
+    .proyect-item{
+        grid-column: auto;
+        grid-row: 2;
+    }
+    #carousel-proyects{
+        padding: 2rem;
+    }
+    #proyects-collection{
+        object-fit: contain;
+    }
+    .card-proyect{
+        margin: .5rem;
+        align-items: center;
+    }
+    .img-proyect{
+        width: 12rem;
+        height: 12rem;
+    }
+    .card-descrip{
+        margin: 0 0 0 1rem;
+    }
+    .card-descript{
+        height: auto;
+        width: 95%;
+        text-wrap: pretty;
+    }
+    #show-more{
+        column-span: all;
+        grid-row: 3;
+    }
+    #showMore-btn{
+        margin: 0 1rem 0 1rem;
+    }
+</style>

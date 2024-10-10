@@ -1,78 +1,86 @@
 ---
 ---
-<div id="home" class="
-    py-3
-    w-[70%]">
+
+<section id="home" class="
+    w-[70%]
+    grid
+    grid-cols-5
+    grid-rows-3">
 
     <img src="../../public/img/fotoperfil.png"
         alt=""
         id="img-profile"
-        class="rounded-lg row-span-3">
-    <div>
-        <h1 id="title" class="profile">Hi, i'm Juan Hidalgo</h1>
-        <span id="subtitle">Developer Full-Stack Junior</span>
-    </div>
-    <p id="profile-info">Specializes in designing UI/UX and developing cutting-edge software solutions for web aplications.</p>
-    <ul
-        id="profile-bar"
-        class="flex justify-between">
-        <li class="px-1"> <i class="bi bi-linkedin"> </i>
-        </li>
-        <li class="px-1"> <i class="bi bi-github"> </i>
-        </li>
-        <li class="px-1"> <i class="bi bi-telephone-fill"> </i>
-        </li>
-        <li class="px-1"> <i class="bi bi-envelope-fill"> </i>
-        </li>
-    </ul>
-</div>
+        class="rounded-lg row-span-3 col-start-2">
+    <span id="home-info" class="row-start-2 col-start-3 col-span-2">
+        <img src="../../public/img/profesion.svg" alt="" id="title" class="profile">
+        <p id="profile-info"><span id="subtitle">Hi, i'm Juan Hidalgo.</span> specializes in UI/UX design and developing cutting-edge software solutions for web aplications.</p>
+        <nav
+            id="profile-bar"
+            class="flex justify-around">
+                <a 
+                href=""
+                class="px-1 social-btn social-btn">
+                    <i class="bi bi-linkedin"></i> Linkedin
+                </a>
+                <a 
+                href=""
+                class="px-1 social-btn social-btn">
+                    <i class="bi bi-github"></i> Github
+                </a> 
+                <a 
+                href=""
+                class="px-1 social-btn social-btn">
+                    <i class="bi bi-envelope-fill"></i> Email
+                </a>
+        </nav>
+    </span>
+</section>
 <style>
+
     #home{
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        align-items: center;
+        margin: 0 0 1.5rem 0;
+        height: 90vh;
+        gap: 1.5rem;
+        border-radius: 3rem;
+        background: linear-gradient(to bottom, #ff8235, #fdd843);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
     #img-profile{
-        width: 13rem;
+        width: 30rem;
         place-self: center;
-        grid-column: 2;
-        column-span: 2;
     }
-    .profile,
-    #title,
-    #subtitle,
-    #profile-info,
-    #profile-bar{
-        grid-column: 3;
-        column-span: 2;
-    }
-    #title{
-        width: 15rem;
-        font-size: 1.5rem;
+    #home-info{
+        width: 100%;
     }
     #subtitle{
-        color: var(--tiger-orange);
-        font-size: 1rem;
-    }
-    #profile-info,
-    #profile-bar{
-        width: 18rem;
+        color: var(--white-pearl);
+        font-size: 1.5rem;
+        font-weight: 700;
     }
     #profile-info{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        text-wrap: pretty;
     }
     #profile-bar{
-        font-size: 1rem;
         place-self: start;
     }
-    li{
-        background-color: var(--gray-smoke);
-        padding: .1rem 1.2rem .1rem 1.2rem;
-        border-radius: .5rem;
+    .social-btn {
+        min-width: 7rem;
+        padding: .5rem 1rem .5rem 1rem;
+        border-radius: 1rem;
+        background: linear-gradient(145deg, #FFD700, #FFA500); 
+        box-shadow:  5px -5px 10px #ffa50099,
+            -5px 5px 10px #ffc40099;
+        transition: all 10s ease;
     }
-    li:hover{
-        padding: .1rem 1.5rem .1rem 1.5rem;
+
+    .social-btn:hover {
+        background: linear-gradient(145deg, #FFA500, #FFD700);
+        box-shadow: -5px 5px 10px #ffa50099,
+            5px -5px 10px #ffc40099;
     }
-    </style>
+    .bi, .social-btn{
+        font-size: 1.5rem;
+    }
+</style>

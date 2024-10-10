@@ -7,6 +7,7 @@ import Menu from '../components/Menu.astro';
 import Home from '../components/Home.astro';
 import About from '../components/About.astro';
 import Proyects from '../components/Proyects.astro';
+import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
 }
@@ -24,10 +25,11 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Menu/>
-		<Home id="home"/>
-		<About id="about"/>
-		<!--<Proyects/> -->
+		<Menu />
+		<Home />
+		<About />
+		<Proyects />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -42,7 +44,7 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		); */
-		--white-pearl: #F9F9F9;
+		--white-pearl: #f9f9f9;
 		--gray-smoke: #ededed;
 		--jet-black: #0A0A0A;
 		--tiger-yellow:#f58f35;
@@ -51,7 +53,7 @@ const { title } = Astro.props;
 	html {
 		font-family: 'Exo 2 Variable',system-ui, sans-serif;
 		font-style: normal;
-		font-size: 15px
+		font-size: 15px;
 	}
 	body{
 		color: var(--jet-black);
@@ -64,6 +66,6 @@ const { title } = Astro.props;
 		font-weight: 700;
 	}
 	p{
-		text-wrap: balance;
+		text-wrap: pretty;
 	}
 </style>
